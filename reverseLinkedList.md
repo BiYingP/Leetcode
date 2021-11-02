@@ -17,7 +17,6 @@ Output: [5,4,3,2,1]
  * }
 
 
-
     public ListNode reverseList(ListNode head) {
         ListNode pre = null;
         // ListNode cur = head;
