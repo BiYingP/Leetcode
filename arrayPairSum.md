@@ -15,6 +15,7 @@ So the maximum possible sum is 4.
 
 
     public int arrayPairSum(int[] nums) {
+
         Arrays.sort(nums);
         
         int sum = 0;
