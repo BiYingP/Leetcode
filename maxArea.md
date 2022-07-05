@@ -7,6 +7,7 @@ Find two lines that together with the x-axis form a contioner, such that the con
 Return the maximum amount of water a container can store.
 
 Input: height = [1,8,6,2,5,4,8,3,7]
+
 Output: 49
 
 Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water can contain is 49.
@@ -16,7 +17,8 @@ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,
         int max = 0, l = 0, r = height.length - 1;
         
         while (l < r){
-            max = Math.max(max, Math.min(height[l], height[r]) * (r - l));
+            int area = Math.min(height[l], height[r]) * (r - l);
+            max = Math.max(max, area);
             if (height[l] < height[r]){
                 l++;
             }
@@ -26,4 +28,3 @@ Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,
         }
         return max;
     }
-
