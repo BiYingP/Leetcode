@@ -17,11 +17,10 @@ Input: s = "rat", t = "car"
 Output: false
 
 
-
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
         
-        int count [] = new int[26];
+        int[] count = new int[26];
         for (int i = 0; i < s.length(); i++){
             count[s.charAt(i) - 'a']++;
             count[t.charAt(i) - 'a']--;
@@ -31,8 +30,8 @@ Output: false
             if(c != 0) return false;
         }
         
-//         char char_s[]=s.toCharArray();
-//         char char_t[]=t.toCharArray();
+//         char[] char_s=s.toCharArray();
+//         char[] char_t=t.toCharArray();
 //         Arrays.sort(char_s);
 //         Arrays.sort(char_t);
         
