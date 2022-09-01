@@ -24,13 +24,27 @@ Output: "y"
 
     public char findTheDifference(String s, String t) { 
         
-        int i = 0;
-        int res = 0;
+//         int i = 0;
+//         int res = 0;
         
-        while (i < s.length()){
-            res += t.charAt(i) - s.charAt(i);
-            i++;
+//         while (i < s.length()){
+//             res += t.charAt(i) - s.charAt(i);
+//             i++;
+//         }
+//         res += t.charAt(i);
+//         return (char) res;
+        char res = '0';
+        
+        for(char c: s.toCharArray()){
+            res ^= c;
         }
-        res += t.charAt(i);
-        return (char) res;
-    }
+        
+        for(char c: t.toCharArray()){
+            res ^= c;
+        }
+        
+        res ^= '0';
+        return res;
+    }  
+
+
