@@ -12,18 +12,6 @@ Output: [1,1,2,3,4,4]
 
 
 
-
-// /**
-//  * Definition for singly-linked list.
-//  * public class ListNode {
-//  *     int val;
-//  *     ListNode next;
-//  *     ListNode() {}
-//  *     ListNode(int val) { this.val = val; }
-//  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-//  * }
-//  /
-
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // dummy head
         ListNode head = new ListNode();
