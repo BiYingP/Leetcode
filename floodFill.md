@@ -23,3 +23,28 @@ Explanation: From the center of the image with position (sr, sc) = (1,1)(i.e, th
 Note: the bottom corner is not colored 2, because it is not 4-directionally connected to the starting pixel.
 
 
+
+    public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        if (image[sr][sc] == color) {
+            return image;
+        }
+        fill(image, sr, sc, image[sr][sc], color);
+        
+        return image;
+    }
+    public void fill(int[][] image, int sr, int sc, int color, int newColor){
+        if(sr < 0 || sc < 0 || sr >= image.length || sc >= image[0].length || image[sr][sc] != color){
+            return;
+        }
+        
+        image[sr][sc] = newColor;
+//         int[][] d = {{1,0}, {-1,0}, {0,1},{0,-1}};
+        
+//         for (int i = 0; i < 4; i++){
+//             fill(image, sr+d[i][0], sc+d[i][1], color, newColor);
+//         }
+        fill(image, sr+1, sc, color, newColor);
+        fill(image, sr-1, sc, color, newColor);
+        fill(image, sr, sc+1, color, newColor);
+        fill(image, sr, sc-1, color, newColor);
+    }
