@@ -14,20 +14,9 @@ Example
 ![title](/image.png)
 
 
-Input: image = [[1,1,1],
+Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
 
-		[1,1,0],
-
-		[1,0,1]],
-
-	sr = 1, sc = 1, color = 2
-
-Output: [[2,2,2],
-	 
-	 [2,2,0],
-         
-	 [2,0,1]]
-
+Output: [[2,2,2],[2,2,0],[2,0,1]]
 
 Explanation: From the center of the image with position (sr, sc) = (1,1)(i.e, the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e, the blue pixels) are colored with the new color. 
 
@@ -38,25 +27,25 @@ Note: the bottom corner is not colored 2, because it is not 4-directionally conn
         if (image[sr][sc] == color) {
             return image;
         }
-        fill(image, sr, sc, image[sr][sc], color);
+        dfs(image, sr, sc, image[sr][sc], color);
         
         return image;
     }
-    public void fill(int[][] image, int sr, int sc, int color, int newColor){
+    public void dfs(int[][] image, int sr, int sc, int color, int newColor){
         if(sr < 0 || sc < 0 || sr >= image.length || sc >= image[0].length || image[sr][sc] != color){
             return;
         }
         
         image[sr][sc] = newColor;
 
-        fill(image, sr+1, sc, color, newColor);
-        fill(image, sr-1, sc, color, newColor);
-        fill(image, sr, sc+1, color, newColor);
-        fill(image, sr, sc-1, color, newColor);
+        dfs(image, sr+1, sc, color, newColor);
+        dfs(image, sr-1, sc, color, newColor);
+        dfs(image, sr, sc+1, color, newColor);
+        dfs(image, sr, sc-1, color, newColor);
         
 //         int[][] d = {{1,0}, {-1,0}, {0,1},{0,-1}};
         
 //         for (int i = 0; i < 4; i++){
-//             fill(image, sr+d[i][0], sc+d[i][1], color, newColor);
+//             dfs(image, sr+d[i][0], sc+d[i][1], color, newColor);
 //         }
     }
