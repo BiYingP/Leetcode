@@ -20,20 +20,18 @@ To solve this problem, use ** Floyd Cycle Algorithm ** which states that
 
 
     public boolean hasCycle(ListNode head) {
-        // Intialize pointers at the head of linkedlist 
+        
         ListNode slow = head;
         ListNode fast = head;
         
         while(fast != null && fast.next != null){
-            // Moving slow by 1
+            
             slow = slow.next;
-	    // Moving fast by 2
             fast = fast.next.next;
-	    // If they meet return true
+            
             if (slow == fast){
                 return true;
-            }
-             
+            }  
         }
         return false;
     }
