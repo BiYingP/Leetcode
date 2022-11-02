@@ -10,7 +10,6 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 
 
     public boolean hasCycle(ListNode head) {
-        if (head == null) return false;
         
         ListNode slow = head;
         ListNode fast = head;
