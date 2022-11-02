@@ -9,16 +9,27 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 ![image](image/image9.png)
 
 
+To solve this problem, use ** Floyd Cycle Algorithm ** which states that
+
+- Traverse linked list using two pointers
+
+- Move one pointer(slow pointer) by one and another pointer(fast pointer) by two.
+
+- If these pointers meet at the same node then there is a loop. If not, then linked list does not have a loop.
+
+
+
     public boolean hasCycle(ListNode head) {
-        
+        // Intialize pointers at the head of linkedlist 
         ListNode slow = head;
         ListNode fast = head;
         
         while(fast != null && fast.next != null){
-            
+            // Moving slow by 1
             slow = slow.next;
+	    // Moving fast by 2
             fast = fast.next.next;
-	    
+	    // If they meet return true
             if (slow == fast){
                 return true;
             }
