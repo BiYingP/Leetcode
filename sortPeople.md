@@ -1,4 +1,4 @@
-Sort the People
+# Sort the People
 
 Given an array of strings names, and array heights that consist of distinct positive integers. Both arrays are of length n.
 

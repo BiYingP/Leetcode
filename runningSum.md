@@ -1,4 +1,4 @@
-Running Sum of 1d Array
+# Running Sum of 1d Array
 
 Given an array nums. A running sum of an array defined as runningSum[i] = sum(nums[0]...nums[i].
 

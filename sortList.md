@@ -1,12 +1,11 @@
-Sort List
+# Sort List
 
 Given the head of a linked list, return the list after sorting it in ascending order.
 
 Example:
 
-Input: head = [4,2,1,3]
+![image](image/image8.png)
 
-Output: [1,2,3,4]
 
 
     public ListNode sortList(ListNode head) {
