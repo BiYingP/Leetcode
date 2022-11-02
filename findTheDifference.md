@@ -1,4 +1,4 @@
-Find the Difference
+# Find the Difference
 
 You are given two string s and t.
 

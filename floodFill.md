@@ -1,4 +1,4 @@
-Flood Fill
+# Flood Fill
 
 An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
 
@@ -11,7 +11,7 @@ Return the modified image after performing the flood fill.
 Example
 
 
-![title](/image.png)
+![title](image/image.png)
 
 
 Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2

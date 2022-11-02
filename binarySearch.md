@@ -1,4 +1,4 @@
-Birnary Search
+# Birnary Search
 
 Given an array of integers nums which is sorted in ascending orderm and an integer target, write a function to search target in nums. if target exits, then return its index. Otherwise, return -1.
 

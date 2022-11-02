@@ -1,4 +1,4 @@
-Jumping On the Clouds (Souce: HackerRank)
+# Jumping On the Clouds (Souce: HackerRank)
 
 In the game, the player will get an array of clouds numbered 0 if they are safe or 1 if they must be avoided
 

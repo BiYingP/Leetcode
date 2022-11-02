@@ -1,10 +1,12 @@
-Containter With Most Water
+# Containter With Most Water
 
 You are given an integer array height of length n. There are n vertical lines draw sunch that two endpoints of the ith line are (i, 0) and (i, height[i]).
 
 Find two lines that together with the x-axis form a contioner, such that the container contains the most water.
 
 Return the maximum amount of water a container can store.
+
+![image](image/image1.png)
 
 Input: height = [1,8,6,2,5,4,8,3,7]
 

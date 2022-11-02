@@ -1,4 +1,4 @@
-Group Anagrams
+# Group Anagrams
 
 Given an array of strings str, group the anagrams together. You can return the answer in any order.
 
