@@ -1,4 +1,4 @@
-Merge Two Sorted Lists
+# Merge Two Sorted Lists
 
 Given the heads of two sorted linked list l1 and l2. Merge two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
 

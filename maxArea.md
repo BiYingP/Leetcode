@@ -6,6 +6,8 @@ Find two lines that together with the x-axis form a contioner, such that the con
 
 Return the maximum amount of water a container can store.
 
+Example
+
 ![image](image/image1.png)
 
 Input: height = [1,8,6,2,5,4,8,3,7]
