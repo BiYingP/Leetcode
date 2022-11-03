@@ -31,3 +31,8 @@ Explanation: 9 exists in nums and its index is 4.
 
         return -1;
     }
+
+
+Time Complexity is *O(log n)* and Space Complexity is *O(log n)*.
+
+To find the target in a group, the worst case scenario is go through every single element *(O(n))*. When elements are sorted, the search time can bring down to *O(log n)* by using Binary Search.
