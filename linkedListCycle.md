@@ -18,7 +18,7 @@ To solve this problem, use ** Floyd Cycle Algorithm ** which states that
 - If these pointers meet at the same node then there is a loop. If not, then linked list does not have a loop.
 
 
-
+![image](image/image11.png)
 
 
     public boolean hasCycle(ListNode head) {
