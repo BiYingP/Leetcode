@@ -12,17 +12,7 @@ There is a cycle in a linked list if there is some node in the list that can be 
 
 
 
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
+![image](image/image11.png)
 
 
     public ListNode detectCycle(ListNode head) {
