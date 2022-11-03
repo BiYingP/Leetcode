@@ -20,3 +20,21 @@ Given two integers m and n, return the number of possible unique paths that the 
         }
         return dp[m][n];
     }
+
+
+
+The time complexity of the above dynamic programming is O(mn) and the space comlexity is O(mn). The solution is more intuitive, we can also reduce the space by O(n), where n is column size.
+
+
+    public int uniquePaths(int m, int n) {
+
+        int[] dp = new int[n+1];
+        dp[1] = 1;
+        
+        for (int r = 1; r <= m; r++){
+            for (int c = 1; c <= n; c++){
+                dp[c] += dp[c-1];
+            }
+        }
+        return dp[n];
+    }
