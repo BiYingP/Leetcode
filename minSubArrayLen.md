@@ -10,6 +10,10 @@ Output: 2
 
 Explanation: The subarray [4,3] has minimal length under the problem constraint.
 
+## Example:
+
+Input: target = 11, nums = [1,1,1,1,1,1,1,1]
+
 
 	public int minSubArrayLen(int target, int[] nums){
 		int min = Integer.MAX_VALUE;
