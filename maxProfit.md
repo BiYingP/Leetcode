@@ -7,7 +7,7 @@ You want to maximize your profit by choosing a single day to buy one stock and c
 Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
 
-Example 1:
+### Example:
 
 Input: prices = [7,1,5,3,6,4]
 Output: 5
@@ -29,3 +29,25 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
         }
         return profit;
     }
+
+Two Pointer Approach
+
+	public int maxProfit(int[] prices){
+		int profit;
+		int max_profit;
+		int left = 0; // left pointer
+		int right = 0; // right pointer
+
+		while (right < prices.length){
+			if (prices[right] > prices[left]){
+				profit = prices[right] - prices[left];
+				max_profit = Math.max(max_profit, profit);
+			}
+			else{
+				left = right;
+			}
+			right++;
+		}
+		return max_profit;
+	}
+
