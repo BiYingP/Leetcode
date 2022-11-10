@@ -13,7 +13,7 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 
 **Output:** 5
 
-Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+**Explanation:** Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 
 
     public int maxProfit(int[] prices) {
@@ -35,8 +35,8 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 Two Pointer Approach
 
 	public int maxProfit(int[] prices){
-		int profit;
-		int max_profit;
+		int profit = 0;
+		int max_profit = 0;
 		int left = 0; // left pointer
 		int right = 0; // right pointer
 
