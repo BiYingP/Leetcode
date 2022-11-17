@@ -4,7 +4,7 @@ Given two strings ransomNote and magazine, return true if ransomNote can be cons
 
 Each letter in magazine can only be used once in ransomNote.
 
-***Example:***
+### Example: ###
 
 **Input:** ransomNote = "a", magazine = "b"
 
@@ -16,7 +16,7 @@ Each letter in magazine can only be used once in ransomNote.
 
 
 
-***Array Approach**
+**Array Approach**
 
 	public boolean canConstruct(String ransomNote, String magazine){
 		int[] count = new int[26];
@@ -37,7 +37,7 @@ Each letter in magazine can only be used once in ransomNote.
 Time Complexity: O(n + m), where n is size of ransomNote, m is size of magazine.
 Space Complexity: O(1).
 
-***HashMap Approach***
+**HashMap Approach**
 
 	public boolean canConstruct(String ransomNote, String magazine){
 		// using hashmap
