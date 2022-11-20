@@ -44,6 +44,7 @@ Space Complexity: O(1).
 		HashMap<Character, Integer> map = new HashMap();
 
 		for (char c : magazine.toCharArray()){
+			// map.put(c, map.getOrDefault(c, 0) + 1);
 			if (!map.containsKey(c)){
 				map.put(c, 1);
 			}else{
