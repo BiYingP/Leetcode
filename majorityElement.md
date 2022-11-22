@@ -71,6 +71,25 @@ Time Complexity: O(nlgn) Space Complexity: O(1)
 		return -1;
 	}
 
+	public int majorityElement(int[] nums){
+		HashMap<Integer, Integer> map = new HashMap();
+
+		for (int i : nums){
+			//map.put(i, map.getOrDefault(i,0) + 1);
+			if (!map.containsKey()){
+				map.put(i, 1);
+			}else{
+				map.put(i, map.get(i) + 1);
+			}
+		}
+		for (Map.Entry<Integer, Integer> entry : map.entrySet()){
+			if (entry.getValue() > nums.length / 2){
+				return entry.getKey();
+			}
+		}
+		return -1;
+	}
+
 Time Complexity: O(n) Space Complexity: O(n)
 
 ### Boyer Moore Voting Algorithm Approach ###
