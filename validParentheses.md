@@ -10,7 +10,7 @@ An input string is valid if:
 
 -Every close bracket has a corresponding open bracket of the same type.
 
-Examle:
+### Examle: ###
 
 Input: s = "()[]{}"
 
@@ -21,6 +21,7 @@ Input: s = "(]"
 Output: false
 
 
+### Stack Approach ###
 
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack();
@@ -42,3 +43,7 @@ Output: false
         }
         return stack.isEmpty();
     }
+
+Time Complexity: O(n) Space Complexity: O(n)
+
+

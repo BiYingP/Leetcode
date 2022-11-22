@@ -72,3 +72,27 @@ Time Complexity: O(nlgn) Space Complexity: O(1)
 	}
 
 Time Complexity: O(n) Space Complexity: O(n)
+
+### Boyer Moore Voting Algorithm Approach ###
+
+	public int majorityElement(int[] nums){
+		int count = 0;
+		int majority = 0;
+
+		for (int num : nums){
+			if (count == 0){
+				majority = num;	
+			}
+			if (majority == num){
+				count++;
+			}else{
+				count--;
+			}
+		}
+		return majority;
+
+	}
+
+Time Complexity: O(n) Space Complexity: O(1)
+
+
