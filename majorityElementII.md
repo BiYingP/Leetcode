@@ -11,9 +11,9 @@ Given an integer array of size n, find all elements that appear more than [n/3] 
 
 ### Example 2: ###
 
-**Input: ** nums = [1,2]
+**Input:** nums = [1,2]
 
-**Output: ** [1,2]
+**Output:** [1,2]
 
 
 ### Brute Force Approach ###
