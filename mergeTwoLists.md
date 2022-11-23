@@ -4,13 +4,17 @@ Given the heads of two sorted linked list l1 and l2. Merge two lists in a one so
 
 return the head of the merged linked list.
 
-Example:
+[!image](image/image14.png)
 
-Input: l1 = [1,2,4], l2 = [1,3,4]
+	public class ListNode{
+		int val;
+		ListNode next;
+		ListNode(){}
+		ListNode(int val){this.val = val;}
+		ListNode(int val, ListNode next){this.val = val; this.next = next;}
+	}
 
-Output: [1,1,2,3,4,4]
-
-
+### Iterative Approach ###
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // dummy head
@@ -35,3 +39,21 @@ Output: [1,1,2,3,4,4]
         return head.next;
     }
 
+### Recursive Approach ###
+
+	public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+		// Base Case
+		if (l1 == null) return l2;
+		if (l2 == null) return l1;
+		
+		while (l1 != null && l2 != null){
+			if (l1.val < l2.val){
+				l1.next = mergerTwoLists(l1.next, l2);
+				return l1;
+			}else{
+				l2.next = mergerTwoLists(l1, l2.next);
+				return l2;
+			}
+		}
+		return l1;
+	}
