@@ -4,7 +4,7 @@ Given the heads of two sorted linked list l1 and l2. Merge two lists in a one so
 
 return the head of the merged linked list.
 
-[!image](image/image14.png)
+![image](image/image14.png)
 
 	public class ListNode{
 		int val;
