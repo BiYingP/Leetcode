@@ -16,13 +16,16 @@ Explanation: The middle node of the list is node 3
 
 Definition for singly-linked list
 
-public class ListNode{
-        int val;
-        ListNode next;
-        ListNode(){}
-        ListNode(int val){ this.val = val;}
-        ListNode(int val, ListNode next){ this.val = val; this.next = next;}
+	public class ListNode{
+        	int val;
+        	ListNode next;
+        	ListNode(){}
+        	ListNode(int val){ this.val = val;}
+		ListNode(int val, ListNode next){ this.val = val; this.next = next;}
 
+### Two Pointers Approach ###
+
+When fast pointer reaches the end then slow pointer is going to be at middle.
 
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
@@ -35,3 +38,4 @@ public class ListNode{
         return slow;
     }
 
+Time Complexity: O(n) Space Complexity: O(1)
