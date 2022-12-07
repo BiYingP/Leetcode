@@ -17,7 +17,7 @@ Given an array, rotate the array to the right by k steps, where k is non-negativ
 		for (int i = 0; i < nums.length; i++){
 			res[(i+k)%nums.length] = nums[i];
 		}
-		
+		// make a copy of the array		
 		for (int i = 0; i < nums.length; i++){
 			nums[i] = res[i];
 		}
