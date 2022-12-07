@@ -31,4 +31,28 @@ Return the indices of the two nums.
 
 Time Complexity: O(n) Space Complexity: O(1)
 
+### Binary Search Approach ###
+
+	public int[] towSum(int[] nums, int target){
+		
+		for (int i = 0; i < nums.length; i++){
+			int l = i + 1;
+			int r = nums.length-1;
+
+			while (l <= r){
+				int pivot = l + (r - l) / 2
+				if (nums[pivot] == target - nums[i]){
+					return new int[] {i+1, pivot+1};
+				}else if (nums[pivot] > target - nums[i]){
+					r = pivot - 1;
+				}else{
+					l = pivot + 1;
+				}
+			}
+		}
+		return new int[] {-1,-1};
+	}
+
+Time Complexity: O(nlogn) Space Complexity: O(1)
+
 
