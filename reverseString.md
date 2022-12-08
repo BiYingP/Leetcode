@@ -10,6 +10,7 @@ You must do this by modifying the input array in-place with O(1) extra memory.
 
 **Output:** ["o","l","l","e","h"]
 
+### Two Pointer Approach 
 
 	public void reverseStrings(char[] s){
 		int i = 0;
@@ -26,4 +27,9 @@ You must do this by modifying the input array in-place with O(1) extra memory.
 
 Time Complexity: O(n) Space Complexity: O(1)
 
+### StringBuilder Approach
 
+	public void reverseStrings(char[] s){
+		StringBuilder sb = new StringBu:ilder(s);
+		return sb.reverse().toString();
+	}
