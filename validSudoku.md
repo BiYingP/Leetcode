@@ -50,7 +50,7 @@ Output: true
 		for (int r = 0; r < 9; r++){
 			for (int c = 0; c < 9; c++){
 				char n = board[r][c];
-
+				if (n == '.') continue;
 				if (row[r].contains(n) || col[c].contains(n) || box[(r/3)*3+c/3].contains[n]){
 					return false;
 				}
