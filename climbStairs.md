@@ -29,23 +29,28 @@ Explanation: There are three ways to climb to the top.
 
 3. 2 steps + 1 step
 
+### Iteractive Approach
+
+	public int climbStairs(int n){
+		int oneStep = 1;
+		int twoStep = 2;
+		int res = 0;
+
+		if (n == 1 || n == 2) return n;
+
+		for (int i = 3; i <= n; i++){
+			res = oneStep + twoStep;
+			oneStep = twoStep;
+			twoStep = res;
+		}
+		return res;
+	}
+
+Time Complexity: O(n) Space Complexity: O(1)
+
+### Dynamic Progamming Approach
 
     public int climbStairs(int n) {
-        
-//         int one_step = 1, two_step = 2;
-//         for (int i = 3; i <= n; i++ ){
-//             int tmp = two_step;
-//             two_step = one_step + two_step;
-//             one_step = tmp;
-        // return two_step;
-
-        // int one_step = 1, two_step = 1;
-        // for (int i = 0; i < n-1; i++){
-        //     int temp = one_step;
-        //     one_step = one_step + two_step;
-        //     two_step = temp;
-        // }
-        // return one_step;
         
         // Dynamic Programming
         if (n == 1) return 1;
@@ -58,3 +63,6 @@ Explanation: There are three ways to climb to the top.
         }
         return dp[n];
     }
+
+Time Complexity: O(n) Space Complexity: O(n)
+
