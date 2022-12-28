@@ -46,3 +46,5 @@ Output: [[],[1],[2],[1,2],[3],[2,3],[1,2,3]]
 	}
 
 
+Time Complexity: O(n^2) Space Complexity: O(n)
+
