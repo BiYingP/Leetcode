@@ -45,4 +45,30 @@ Explanation:
 
 Time Complexity: O(n) Space Complexity: O(1)
 
+### Two Pointer Approach
+
+	public boolean isHappy(int n){
+		int slow = n;
+		int fast = n;
+
+		do{
+			slow = square(slow);
+			fast = square(square(slow));
+		} while (slow != fast);
+		
+		if (slow == 1) return true;
+		return false;
+	}
+
+	public int square(int n){
+		int sum = 0;
+		while (n > 0){
+			sum += (n%10) * (n%10);
+			n /= 10;
+		}
+		return sum;
+	}
+
+Time Complexity: O(n) Space Complexity: O(1)
+
 
