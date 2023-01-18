@@ -11,7 +11,7 @@ Output: [0,1]
 
 Explanation: nums[0] + nums[1] = 9, return [0,1]
 
-
+### Two Pointer Approach
         
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
@@ -27,3 +27,20 @@ Explanation: nums[0] + nums[1] = 9, return [0,1]
         return result;
     }        
               
+Time Complexity: O(n) Space Complexity: O(n)
+
+### HashMap Appraoch
+
+	public int[] twoSum(int[] nums, int target){
+		map<Integer, Integer> map = new HashMap();
+
+		for (int i = 0; i < nums.length; i++){
+			if (map.containsKey(target-nums[i]){
+				return new int[]{map.get(target-nums[i]),i};
+			}
+			map.put(nums[i], i);
+		}
+		return new int[]{0,0};
+	}
+
+Time Complexity: O(n) Space Complexity: O(n)
