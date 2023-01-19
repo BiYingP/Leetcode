@@ -11,7 +11,7 @@ Output: [0,1]
 
 Explanation: nums[0] + nums[1] = 9, return [0,1]
 
-### Two Pointer Approach
+### Nested Loop Approach
         
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
