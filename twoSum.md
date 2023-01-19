@@ -27,7 +27,7 @@ Explanation: nums[0] + nums[1] = 9, return [0,1]
         return result;
     }        
               
-Time Complexity: O(n) Space Complexity: O(n)
+Time Complexity: O(n^2) Space Complexity: O(n)
 
 ### HashMap Appraoch
 
