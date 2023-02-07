@@ -5,7 +5,7 @@ Given an m x n matrix, return all elements of the matrix in spiral order.
 
 Example:
 
-![image](image/image15)
+![image](image/image15.png)
 
 
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
