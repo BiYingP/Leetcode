@@ -55,4 +55,5 @@ public class MaxVowels{
 	}
 }
 
-
+// Time Complexity: O(n)
+// Space Complexty: O(1)
