@@ -24,11 +24,59 @@
 // The second senator can't exercise any rights anymore since his right has been banned.
 // The third senator comes from Dire and he can ban the first senator's right in round 1.
 // In round 2, the third senator can just announce the victory since he is the only guy in the senate who can vote.
+import java.util.*;
 
 public class PredictPartyVictory{
+	public static String solution1(String senate){
+		Queue<Integer> r = new LinkedList();
+		Queue<Integer> d = new LinkedList();
 
+		for (int i = 0; i < senate.length(); i++){
+			if (senate.charAt(i) == 'R'){
+				r.add(i);
+			}
+			else{
+				d.add(i);
+			}
+		}
 
-	public static main(String[] args){
+		while (!r.isEmpty() && !d.isEmpty()){
+			int indexR = r.poll();
+			int indexD = d.poll();
+
+			if (indexR < indexD){
+				r.add(indexR + senate.length());
+			}
+			else{
+				d.add(indexD + senate.length());
+			}
+		}
+		return !r.isEmpty() ? "Radiant" : "Dire";
+	}
+
+	public static String solution2(String senate){
+		int count = 0;
+
+		for (int i = 0; i < senate.length(); i++){
+			if (senate.charAt(i) == 'R'){
+				if (count < 0){
+					senate += 'D';
+				}
+				count++;
+			}
+			else{
+				if (count > 0){
+					senate += 'R';
+				}
+				count--;
+			}
+		}
+		return count > 0 ? "Radiant" : "Dire";
+	}	
+	public static void main(String[] args){
+		String senate = "RDD";
+		System.out.println(solution1(senate));
+		System.out.println(solution2(senate));
 	
 	}
 }
