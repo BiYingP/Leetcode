@@ -24,9 +24,26 @@
 
 public class MostPoints{
 	public static int mostPoints(int[][] questions){
+		int[] dp = new int[questions.length + 1];
 
+		for (int i = questions.length - 1; i >= 0; i--){
+			int nextQ = questions[i][1] + i + 1;
+
+			if (nextQ < questions.length){
+				dp[i] = questions[i][0] + dp[nextQ];
+			}
+			else{
+				dp[i] = questions[i][0];
+			}
+			dp[i] = Math.max(dp[i], dp[i+1]);
+		}
+
+		return dp[0];
 	}
 	public static void main(String[] args){
-
+		int[][] questions = {{3,2},{4,3},{4,4},{2,5}};
+		System.out.println(mostPoints(questions));
 	}
-} 
+}
+
+// Time Complexity: O(n) Space Complexity: O(1) 
