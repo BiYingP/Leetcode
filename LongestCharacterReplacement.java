@@ -9,4 +9,13 @@
 // Output: 4
 // Explanation: Replace the two 'A's with two 'B's or vice versa
 
+public class LongestCharacterReplacement{
 
+	public static int characterReplacement(String s, int k){
+		
+	}
+	public static void main(String[] args){
+		
+	}
+
+}
